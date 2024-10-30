@@ -30,10 +30,9 @@ There are four levels of environment variables:
 
 **Setting environment variables at the project and environment level**
 
-To set environment variables at the project and environment level, click **Deploy** in the top left, then select **Environments**.  Click **Environments Variables** to add and update your environment variables.
+To set environment variables at the project and environment level, click **Deploy**, then select **Environments**.  Click **Environments Variables** to add and update your environment variables.
 
-<Lightbox src="/img/docs/dbt-cloud/using-dbt-cloud/Environment Variables/navigate-to-env-vars.gif" title="Environment variables tab"/>
-
+<Lightbox src="/img/docs/dbt-cloud/using-dbt-cloud/Environment Variables/navigate-to-env-vars.png" title="Environment variables tab"/>
 
 
 You'll notice there is a `Project Default` column. This is a great place to set a value that will persist across your whole project, independent of where the code is run. We recommend setting this value when you want to supply a catch-all default or add a project-wide token or secret.
