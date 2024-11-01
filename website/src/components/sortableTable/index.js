@@ -4,17 +4,16 @@ const parseMarkdownTable = (markdown) => {
   const rows = markdown.trim().split('\n');
   const headers = rows[0].split('|').map((header) => header.trim()).filter(Boolean);
 
-  // Parse the alignment row
   const alignmentsRow = rows[1].split('|').map((align) => align.trim()).filter(Boolean);
   const columnAlignments = alignmentsRow.map((alignment) => {
     if (alignment.startsWith(':') && alignment.endsWith(':')) {
-      return 'center';  // :-----:
+      return 'center';
     } else if (alignment.startsWith(':')) {
-      return 'left';    // :-----
+      return 'left';  
     } else if (alignment.endsWith(':')) {
-      return 'right';   // -----:
+      return 'right';  
     } else {
-      return 'left';    // Default alignment
+      return 'left';  
     }
   });
 
@@ -56,7 +55,7 @@ const SortableTable = ({ children }) => {
               style={{ 
                 cursor: 'pointer', 
                 position: 'relative', 
-                textAlign: columnAlignments[index],  // Use detected alignment
+                textAlign: columnAlignments[index], 
                 padding: '10px' 
               }} 
             >
@@ -89,7 +88,7 @@ const SortableTable = ({ children }) => {
               <td 
                 key={cellIndex} 
                 style={{ 
-                  textAlign: columnAlignments[cellIndex],  // Use detected alignment
+                  textAlign: columnAlignments[cellIndex], 
                   padding: '8px' 
                 }}
               >
