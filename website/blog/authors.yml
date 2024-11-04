@@ -214,6 +214,11 @@ euan_johnston:
     - icon: fa-github
       url: https://github.com/euanjohnston-dev
   name: Euan Johnston
+faith_mckenna:
+  job_title: Senior Technical Instructor
+  links:
+    - icon: fa-linkedin
+      url: https://www.linkedin.com/in/faithlierheimer/
 filip_byrén:
   image_url: /img/blog/authors/filip-eqt.png
   job_title: VP and Software Architect
@@ -275,6 +280,11 @@ jeremy_cohen:
   job_title: Product Manager
   name: Jeremy Cohen
   organization: dbt Labs
+jerrie_kumalah_kenney:
+  job_title: Resident Architect
+  links:
+    - icon: fa-linkedin
+      url: https://www.linkedin.com/in/jerriekumalah/
 jess_williams:
   image_url: /img/blog/authors/jess.png
   job_title: Head of Professional Services
