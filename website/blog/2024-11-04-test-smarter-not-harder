@@ -4,9 +4,9 @@ The [Analytics Development Lifecycle (ADLC)](https://www.getdbt.com/resources/gu
 
 In this blog, we’ll walk through a plan to define data quality. This will look like: 
 
-- identifying **data hygiene** issues
-- identifying **business-focused anomaly** issues
-- identifying **stats-focused anomaly** issues
+- identifying *data hygiene* issues
+- identifying *business-focused anomaly* issues
+- identifying *stats-focused anomaly* issues
 
 Once we have defined data quality*,* we’ll move on to *prioritize* those concerns. We will: 
 
@@ -25,12 +25,12 @@ Today, we’ll guide you through a particularly thorny problem: testing.
 
 Mariah Rogers broke early ground on data quality and testing in her [Coalesce 2022 talk](https://www.youtube.com/watch?v=hxvVhmhWRJA). We’ve seen similar talks again at Coalesce 2024, like [this one](https://www.youtube.com/watch?v=iCG-5vqMRAo) from the data team at Aiven and [this one](https://www.youtube.com/watch?v=5bRG3y9IM4Q&list=PL0QYlrC86xQnWJ72sJlzDqPS0peE7j9Ed&index=71) from the co-founder at Omni Analytics. These talks share a common theme: testing your dbt project too much can get out of control quickly, leading to alert fatigue.
 
-In our customer engagements, we see ***wildly different approaches*** to testing data. We’ve definitely seen what Mariah, the Aiven team, and the Omni team have described, which is so many tests that errors and alerts just become noise. We’ve also seen the opposite end of the spectrum—only primary keys being tested. From our field experiences, we believe there’s room for a middle path. 
+In our customer engagements, we see *wildly different approaches* to testing data. We’ve definitely seen what Mariah, the Aiven team, and the Omni team have described, which is so many tests that errors and alerts just become noise. We’ve also seen the opposite end of the spectrum—only primary keys being tested. From our field experiences, we believe there’s room for a middle path. 
 A desire for a better approach to data quality and testing isn’t just anecdotal to Coalesce, or to dbt’s training and services. The dbt community has long called for a more intentional approach to data quality and testing - data quality is on the industry’s mind! In fact, [57% of respondents](https://www.getdbt.com/resources/reports/state-of-analytics-engineering-2024) to dbt’s 2024 State of Analytics Engineering survey said that data quality is a predominant issue facing their day-to-day work. 
 
 ### What does d@tA qUaL1Ty even mean?!
 
-High-quality data is **trusted** and **used frequently.** It doesn’t get argued over or endlessly scrutinized for matching to other data. Data *testing* should lead to higher data *quality* and insights, period. 
+High-quality data is *trusted* and *used frequently.* It doesn’t get argued over or endlessly scrutinized for matching to other data. Data *testing* should lead to higher data *quality* and insights, period. 
 
 Best practices in data quality are still nascent. That said, a lot of important baseline work has been done here. There are [case](https://medium.com/@AtheonAnalytics/mastering-data-testing-with-dbt-part-1-689b2a025675) [studies](https://medium.com/@AtheonAnalytics/mastering-data-testing-with-dbt-part-2-c4031af3df18) on implementing dbt testing well. dbt Labs also has an [Advanced Testing](https://learn.getdbt.com/courses/advanced-testing) course, emphasizing that testing should spur action and be focused and informative enough to help address failures. You can even enforce testing best practices and dbt Labs’s own best practices using the [dbt_meta_testing](https://hub.getdbt.com/tnightengale/dbt_meta_testing/latest/) or [dbt_project_evaluator](https://github.com/dbt-labs/dbt-project-evaluator) packages and dbt Explorer’s [Recommendations](https://docs.getdbt.com/docs/collaborate/project-recommendations) page. 
 
@@ -38,9 +38,9 @@ The missing piece is still cohesion and guidance for everyday practitioners to h
 
 To recap, we’re going to start with:
 
-- identifying **data hygiene** issues
-- identifying **business-focused anomaly** issues
-- identifying **stats-focused anomaly** issues
+- identifying *data hygiene* issues
+- identifying *business-focused anomaly* issues
+- identifying *stats-focused anomaly* issues
 
 Next, we’ll prioritize. We will: 
 
@@ -53,19 +53,19 @@ Get a pen and paper (or a google doc) and join us in constructing your own testi
 
 Let’s start our framework by *identifying* types of data quality issues. 
 
-In our daily work with customers, we find that data quality issues tend to fall into one of three broad buckets: **data hygiene, business-focused anomalies,** and **stats-focused anomalies.** Read the bucket descriptions below, and list 2-3 data quality concerns in your own business context that fall into each bucket. 
+In our daily work with customers, we find that data quality issues tend to fall into one of three broad buckets: *data hygiene, business-focused anomalies,* and *stats-focused anomalies.* Read the bucket descriptions below, and list 2-3 data quality concerns in your own business context that fall into each bucket. 
 
 ### Bucket One: Data Hygiene
 
-**Data hygiene** issues ****are concerns you address in your [staging layer.](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) Hygienic data meets your expectations around formatting, completeness, and granularity requirements. Here are a few examples. 
+*Data hygiene* issues **are concerns you address in your [staging layer.](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) Hygienic data meets your expectations around formatting, completeness, and granularity requirements. Here are a few examples. 
 
-- **Granularity:** primary keys are unique and not null. Duplicates throw off calculations!
-- **Completeness:** columns that should always contain text, **do.** Incomplete data is less useful!
-- **Formatting:** email addresses always have a valid domain. Incorrect emails may affect marketing outreach!
+- *Granularity:* primary keys are unique and not null. Duplicates throw off calculations!
+- *Completeness:* columns that should always contain text, *do.* Incomplete data is less useful!
+- *Formatting:* email addresses always have a valid domain. Incorrect emails may affect marketing outreach!
 
 ### Bucket Two: Business-focused Anomalies
 
-**Business-focused anomalies** catch unexpected behavior. You can flag unexpected behavior by clearly defining **expected** behavior. **Business-focused anomalies** are when aspects of the data differ from what you know to be typical in your business. You’ll know what’s typical either through your own analyses, your colleagues’ analyses, or things your stakeholder homies point out to you. 
+*Business-focused anomalies* catch unexpected behavior. You can flag unexpected behavior by clearly defining *expected* behavior. *Business-focused anomalies* are when aspects of the data differ from what you know to be typical in your business. You’ll know what’s typical either through your own analyses, your colleagues’ analyses, or things your stakeholder homies point out to you. 
 
 Since business-focused anomaly testing is set by a human, it will be fluid and need to be adjusted periodically. Here’s an example. 
 
@@ -89,7 +89,7 @@ You should also consider what data issues you have had in the past! Look through
 
 ### Bucket 3: Stats-focused Anomalies
 
-**Stats-focused anomalies** are fluctuations that go against your expected volumes or metrics.  Some examples include: 
+*Stats-focused anomalies* are fluctuations that go against your expected volumes or metrics.  Some examples include: 
 
 - Volume anomalies. This could be site traffic amounts that may indicate illicit behavior, or perhaps site traffic dropping one day then doubling the next, indicating that data were not loaded properly.
 - Dimensional anomalies, like too many product types underneath a particular product line that may indicate incorrect barcodes.
@@ -99,19 +99,19 @@ Overall, stats-focused anomalies can indicate system flaws, illicit site behavio
 
 ## How to prioritize data quality concerns in your pipeline
 
-Now, you have a written and categorized list of data hygiene concerns and business-focused anomalies to guard against. It’s time to **prioritize** which quality issues deserve to fail your pipelines. 
+Now, you have a written and categorized list of data hygiene concerns and business-focused anomalies to guard against. It’s time to *prioritize* which quality issues deserve to fail your pipelines. 
 
 To prioritize your data quality concerns, think about real-life impact. A couple of guiding questions to consider are:
 
-- Are your numbers **customer-facing?** For example, maybe you work with temperature-tracking devices. Your customers rely on these devices to show them average temperatures on perishable goods like strawberries in-transit. What happens if the temperature of the strawberries reads as 300C when they know their refrigerated truck was working just fine? How is your brand perception impacted when the numbers are wrong?
-- Are your numbers **used to make financial decisions?** For example, is the marketing team relying on your numbers to choose how to spend campaign funds?
-- Are your numbers **executive-facing?** Will executives use these numbers to reallocate funds or shift priorities?
+- Are your numbers *customer-facing?* For example, maybe you work with temperature-tracking devices. Your customers rely on these devices to show them average temperatures on perishable goods like strawberries in-transit. What happens if the temperature of the strawberries reads as 300C when they know their refrigerated truck was working just fine? How is your brand perception impacted when the numbers are wrong?
+- Are your numbers *used to make financial decisions?* For example, is the marketing team relying on your numbers to choose how to spend campaign funds?
+- Are your numbers *executive-facing?* Will executives use these numbers to reallocate funds or shift priorities?
 
 We think these 3 categories above constitute high-impact, pipeline-failing events. We think these categories should be your top priorities. Of course, adjust priority order if your business context calls for it. 
 
 Consult your list of data quality issues in the categories we mention above. Decide and mark if any are customer facing, used for financial decisions, or are executive-facing. Mark any data quality issues in those categories as “error”. These are your pipeline-failing events. 
 
-If any data quality concerns fall outside of these 3 categories, we classify them as ***nice-to-knows***. ***Nice-to-know*** data quality testing *can* be helpful. But if you don’t have a *specific action you can immediately take* when a nice-to-know quality test fails, the test **should be a warning, not an error.**
+If any data quality concerns fall outside of these 3 categories, we classify them as **nice-to-knows**. **Nice-to-know** data quality testing *can* be helpful. But if you don’t have a *specific action you can immediately take* when a nice-to-know quality test fails, the test *should be a warning, not an error.*
 
 You could also remove nice-to-know tests altogether. Data testing should drive action. The more alerts you have in your pipeline, the less action you will take. Configure alerts with care! 
 
@@ -121,26 +121,26 @@ However, we do think nice-to-know tests are worth keeping *if and only if* you a
 
 Now, your data quality concerns are listed and prioritized. Next, add 1 or 2 initial debugging steps you will take if/when the issues surface. These steps should get added to your framework document. Additionally, consider adding them to a [test’s description.](https://discourse.getdbt.com/t/is-it-possible-to-add-a-description-to-singular-tests/5472/4) 
 
-This step is **important.** Data quality testing should spur action, not accumulate alerts. Listing initial debugging steps for each concern will refine your list to the most critical elements. 
+This step is *important.* Data quality testing should spur action, not accumulate alerts. Listing initial debugging steps for each concern will refine your list to the most critical elements. 
 
-If you can't identify an action step for any quality issue, **remove it**. Put it on a backlog and research what you can do when it surfaces later. 
+If you can't identify an action step for any quality issue, *remove it*. Put it on a backlog and research what you can do when it surfaces later. 
 
 Here’s a few examples from our list of unexpected behaviors above. 
 
 - For calculated field X, a value above Y or below Z is not possible.
-    - **Debugging initial steps**
+    - *Debugging initial steps*
         - Use dbt test SQL or recent test results in dbt Explorer to find problematic rows
         - Check these rows in staging and first transformed model
         - Pinpoint where unusual values first appear
 - Revenue shouldn’t change by more than X% in Y amount of time.
-    - **Debugging initial steps:**
+    - *Debugging initial steps:*
         - Check recent revenue values in staging model
         - Identify transactions near min/max values
         - Discuss outliers with sales ops team
 
 You now have written out a prioritized list of data quality concerns, as well as action steps to take when each concern surfaces. Next, consult [hub.getdbt.com](http://hub.getdbt.com) and find tests that address each of your highest priority concerns. [dbt-expectations](https://hub.getdbt.com/calogica/dbt_expectations/latest/) and [dbt_utils](https://hub.getdbt.com/dbt-labs/dbt_utils/latest/) are great places to start.
 
-The data tests you’ve marked as “errors” above should get error-level severity. Any concerns falling into that nice-to-know category should either **not get tested** or have their tests **set to warning.** 
+The data tests you’ve marked as “errors” above should get error-level severity. Any concerns falling into that nice-to-know category should either *not get tested* or have their tests *set to warning.* 
 
 Your data quality priorities list is a living reference document. We recommend linking it in your project’s README so that you can go back and edit it as your testing needs evolve. Additionally, developers in your project should have easy access to this document. Maintaining good data quality is everyone’s responsibility! 
 
