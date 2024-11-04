@@ -215,7 +215,7 @@ euan_johnston:
       url: https://github.com/euanjohnston-dev
   name: Euan Johnston
 faith_mckenna:
-  image_url: ‎/img/blog/authors/faith_pic.png
+  image_url: /img/blog/authors/faith_pic.png
   job_title: Senior Technical Instructor
   links:
     - icon: fa-linkedin
@@ -284,7 +284,7 @@ jeremy_cohen:
   name: Jeremy Cohen
   organization: dbt Labs
 jerrie_kumalah_kenney:
-  image_url: ‎website/static/img/blog/authors/jerrie.jpg
+  image_url: /img/blog/authors/jerrie.jpg
   job_title: Resident Architect
   links:
     - icon: fa-linkedin
