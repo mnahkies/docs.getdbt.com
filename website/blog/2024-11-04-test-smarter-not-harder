@@ -1,4 +1,18 @@
-# Test smarter not harder: add the right tests to your dbt project
+---
+title: "Test smarter not harder: add the right tests to your dbt project"
+description: "Testing your data should drive action, not accumulate alerts. We synthesized countless customer experiences to build a repeatable testing framework."
+slug: test-smarter-not-harder
+
+authors: [faith_mckenna, jerrie_kumalah]
+
+tags: [analytics craft]
+hide_table_of_contents: false
+
+date: 2024-11-11
+is_featured: true
+---
+
+
 
 The [Analytics Development Lifecycle (ADLC)](https://www.getdbt.com/resources/guides/the-analytics-development-lifecycle) is a workflow for improving data maturity and velocity. Testing is a key phase here. Many dbt developers tend to focus on [primary keys and source freshness.](https://www.getdbt.com/blog/building-a-data-quality-framework-with-dbt-and-dbt-cloud) We think there is a more holistic and in-depth path to tread. Testing is a key piece of the ADLC, and it should drive data quality. 
 
