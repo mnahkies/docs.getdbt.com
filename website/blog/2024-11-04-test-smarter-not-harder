@@ -3,7 +3,7 @@ title: "Test smarter not harder: add the right tests to your dbt project"
 description: "Testing your data should drive action, not accumulate alerts. We synthesized countless customer experiences to build a repeatable testing framework."
 slug: test-smarter-not-harder
 
-authors: [faith_mckenna, jerrie_kumalah]
+authors: [faith_mckenna, jerrie_kumalah_kenney]
 
 tags: [analytics craft]
 hide_table_of_contents: false
