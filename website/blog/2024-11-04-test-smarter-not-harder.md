@@ -158,4 +158,4 @@ The data tests you’ve marked as “errors” above should get error-level seve
 
 Your data quality priorities list is a living reference document. We recommend linking it in your project’s README so that you can go back and edit it as your testing needs evolve. Additionally, developers in your project should have easy access to this document. Maintaining good data quality is everyone’s responsibility!
 
-As you try these ideas out, come to the dbt community Slack and let us know what works and what doesn’t. Data is a community of practice, and we are eager to hear what comes out of yours.
+As you try these ideas out, come to the dbt Community Slack and let us know what works and what doesn’t. Data is a community of practice, and we are eager to hear what comes out of yours.
