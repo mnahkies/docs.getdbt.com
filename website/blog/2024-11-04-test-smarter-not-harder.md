@@ -75,9 +75,9 @@ In our daily work with customers, we find that data quality issues tend to fall 
 
 *Data hygiene* issues are concerns you address in your [staging layer.](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) Hygienic data meets your expectations around formatting, completeness, and granularity requirements. Here are a few examples.
 
-- *Granularity:* primary keys are unique and not null. Duplicates throw off calculations!
-- *Completeness:* columns that should always contain text, *do.* Incomplete data is less useful!
-- *Formatting:* email addresses always have a valid domain. Incorrect emails may affect marketing outreach!
+- *Granularity:* primary keys are unique and not null. Duplicates throw off calculations.
+- *Completeness:* columns that should always contain text, *do.* Incomplete data often has to get excluded, reducing your overall analytical power.
+- *Formatting:* email addresses always have a valid domain. Incorrect emails may affect things like marketing outreach.
 
 ### Bucket 2: Business-focused anomalies
 
