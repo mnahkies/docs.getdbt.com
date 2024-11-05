@@ -107,7 +107,7 @@ You should also consider what data issues you have had in the past! Look through
 
 *Stats-focused anomalies* are fluctuations that go against your expected volumes or metrics.  Some examples include:
 
-- Volume anomalies. This could be site traffic amounts that may indicate illicit behavior, or perhaps site traffic dropping one day then doubling the next, indicating that data were not loaded properly.
+- Volume anomalies. This could be site traffic amounts that may indicate illicit behavior, or perhaps site traffic dropping one day then doubling the next, indicating that a chunk of data were not loaded properly.
 - Dimensional anomalies, like too many product types underneath a particular product line that may indicate incorrect barcodes.
 - Column anomalies, like sale values more than a certain number of standard deviations from a mean, that may indicate improper discounting.
 
