@@ -101,7 +101,7 @@ Start at your business intelligence (BI) layer. Pick 1-3 dashboards or tables th
 
 You should also consider what data issues you have had in the past! Look through recent data incidents and pick out 3 or 4 to guard against next time. These might be in a #data-questions channel or perhaps a DM from a stakeholder.
 
-### Bucket 3: Stats-focused Anomalies
+### Bucket 3: Stats-focused anomalies
 
 *Stats-focused anomalies* are fluctuations that go against your expected volumes or metrics.  Some examples include:
 
