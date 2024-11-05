@@ -121,7 +121,7 @@ To prioritize your data quality concerns, think about real-life impact. A couple
 - Are your numbers *used to make financial decisions?* For example, is the marketing team relying on your numbers to choose how to spend campaign funds?
 - Are your numbers *executive-facing?* Will executives use these numbers to reallocate funds or shift priorities?
 
-We think these 3 categories above constitute high-impact, pipeline-failing events. We think these categories should be your top priorities. Of course, adjust priority order if your business context calls for it.
+We think these 3 categories above constitute high-impact, pipeline-failing events, and should be your top priorities. Of course, adjust priority order if your business context calls for it.
 
 Consult your list of data quality issues in the categories we mention above. Decide and mark if any are customer facing, used for financial decisions, or are executive-facing. Mark any data quality issues in those categories as “error”. These are your pipeline-failing events.
 
