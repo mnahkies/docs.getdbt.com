@@ -18,9 +18,9 @@ The [Analytics Development Lifecycle (ADLC)](https://www.getdbt.com/resources/gu
 
 In this blog, we’ll walk through a plan to define data quality. This will look like:
 
-- identifying *data hygiene* issues
-- identifying *business-focused anomaly* issues
-- identifying *stats-focused anomaly* issues
+- identifying *data hygiene*  issues
+- identifying *business-focused anomaly*  issues
+- identifying *stats-focused anomaly*  issues
 
 Once we have *defined* data quality, we’ll move on to *prioritize* those concerns. We will:
 
