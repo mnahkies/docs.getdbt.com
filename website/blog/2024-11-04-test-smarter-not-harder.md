@@ -27,6 +27,8 @@ Once we have *defined* data quality, we’ll move on to *prioritize* those conce
 - think through each concern in terms of the breadth of impact
 - decide if each concern should be at error or warning severity
 
+<!-- truncate -->
+
 ### Who are we?
 
 Let’s start with introductions - we’re Faith and Jerrie, and we work on dbt Labs’s training and services teams, respectively. By working closely with countless companies using dbt, we’ve gained unique perspectives of the landscape.  
