@@ -77,7 +77,7 @@ In our daily work with customers, we find that data quality issues tend to fall 
 - *Completeness:* columns that should always contain text, *do.* Incomplete data is less useful!
 - *Formatting:* email addresses always have a valid domain. Incorrect emails may affect marketing outreach!
 
-### Bucket Two: Business-focused Anomalies
+### Bucket 2: Business-focused anomalies
 
 *Business-focused anomalies* catch unexpected behavior. You can flag unexpected behavior by clearly defining *expected* behavior. *Business-focused anomalies* are when aspects of the data differ from what you know to be typical in your business. You’ll know what’s typical either through your own analyses, your colleagues’ analyses, or things your stakeholder homies point out to you.
 
