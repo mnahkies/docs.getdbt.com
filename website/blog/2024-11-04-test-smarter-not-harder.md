@@ -69,7 +69,7 @@ Let’s start our framework by *identifying* types of data quality issues.
 
 In our daily work with customers, we find that data quality issues tend to fall into one of three broad buckets: *data hygiene, business-focused anomalies,* and *stats-focused anomalies.* Read the bucket descriptions below, and list 2-3 data quality concerns in your own business context that fall into each bucket.
 
-### Bucket One: Data Hygiene
+### Bucket 1: Data hygiene
 
 *Data hygiene* issues **are concerns you address in your [staging layer.](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) Hygienic data meets your expectations around formatting, completeness, and granularity requirements. Here are a few examples.
 
