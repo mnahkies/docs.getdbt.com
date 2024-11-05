@@ -22,7 +22,7 @@ In this blog, we’ll walk through a plan to define data quality. This will look
 - identifying *business-focused anomaly* issues
 - identifying *stats-focused anomaly* issues
 
-Once we have defined data quality*,* we’ll move on to *prioritize* those concerns. We will:
+Once we have *defined* data quality, we’ll move on to *prioritize* those concerns. We will:
 
 - think through each concern in terms of the breadth of impact
 - decide if each concern should be at error or warning severity
