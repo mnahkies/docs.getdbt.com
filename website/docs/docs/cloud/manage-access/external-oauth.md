@@ -267,3 +267,18 @@ app in Entra ID, click **Endpoints** and open the **Federation metadata document
 6. `Application ID URI`: Copy the `Application ID URI` field from the resource server’s Overview screen.
 
 </Expandable>
+
+
+
+## Troubleshooting
+
+### Errors when connecting to Snowflake via external Oauth:
+` Failed to connect to DB: xxxxxxx.snowflakecomputing.com:443. The role requested in the connection or the default role if none was requested in the connection ('xxxxx') is not listed in the Access Token or was filtered. Please specify another role, or contact your OAuth Authorization server administrator. `
+
+Snowflake has some guidance on this error here: https://community.snowflake.com/s/article/external-custom-oauth-error-the-role-requested-in-the-connection-is-not-listed-in-the-access-token
+
+To resolve this issue, you should alter your OAuth Security Integration and explicitly specify the Scope mapping attribute: 
+
+ ```sql
+ALTER INTEGRATION <my_int_name> SET EXTERNAL_OAUTH_SCOPE_MAPPING_ATTRIBUTE = 'scp';
+```
