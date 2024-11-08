@@ -63,8 +63,8 @@ Providing a non-unique key will result in unexpected snapshot results. dbt **wil
 ## Default
 This is a **required parameter**. No default is provided.
 
-## Examples
 
+## Examples
 ### Use an `id` column as a unique key
 
 <VersionBlock firstVersion="1.9">
