@@ -1,5 +1,5 @@
 ---
-title: Receiving a `Failed to connect to DB xxxxxxx.snowflakecomputing.com:443` error when when connecting to Snowflake via external Oauth
+title: Receiving a `Failed to connect to DB` error when connecting to Snowflake
 description: "Edit your OAuth Security integration when you see error"
 sidebar_label: 'Receiving `Failed to connect to database` error'
 ---
