@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Markdown from 'markdown-to-jsx';
 
 const stripMarkdown = (text) => {
-  // Remove link syntax: [text](url) -> text
+
   let strippedText = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
-  // Remove other Markdown characters like *, _, ~, ` (for bold, italics, etc.)
+
   strippedText = strippedText.replace(/[_*`~]/g, '');
   return strippedText;
 };
