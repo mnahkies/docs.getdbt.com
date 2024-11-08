@@ -50,19 +50,17 @@ snapshots:
 </File>
 
 ## Description
-
 A column name or expression that is unique for the inputs of a snapshot. dbt uses this to match records between a result set and an existing snapshot, so that changes can be captured correctly.
 
 In Versionless and dbt v1.9 and later, [snapshots](/docs/build/snapshots) are defined and configured in YAML files within your `snapshots/` directory. You can specify one or multiple `unique_key`s within the `config` block of your snapshot YAML file.
 
-:::caution
+:::caution 
 
 Providing a non-unique key will result in unexpected snapshot results. dbt **will not** test the uniqueness of this key, consider [testing](/blog/primary-key-testing#how-to-test-primary-keys-with-dbt) the source data to ensure that this key is indeed unique.
 
 :::
 
 ## Default
-
 This is a **required parameter**. No default is provided.
 
 ## Examples
