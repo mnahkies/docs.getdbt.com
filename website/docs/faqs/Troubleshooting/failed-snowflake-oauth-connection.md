@@ -4,13 +4,13 @@ description: "Edit your OAuth Security integration when you see error"
 sidebar_label: 'Receiving `Failed to connect to database` error'
 ---
 
-If you see the following error w
+1. If you see this error: 
 
 ```
 Failed to connect to DB: xxxxxxx.snowflakecomputing.com:443. The role requested in the connection or the default role if none was requested in the connection ('xxxxx') is not listed in the Access Token or was filtered. Please specify another role, or contact your OAuth Authorization server administrator.
 ```
 
-To resolve this issue, you should edit your OAuth Security integration and explicitly specify this Scope mapping attribute:
+2. Edit your OAuth Security integration and explicitly specify this Scope mapping attribute:
 
  ```sql
 ALTER INTEGRATION <my_int_name> SET EXTERNAL_OAUTH_SCOPE_MAPPING_ATTRIBUTE = 'scp';
