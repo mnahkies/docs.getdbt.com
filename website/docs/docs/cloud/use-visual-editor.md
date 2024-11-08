@@ -45,7 +45,7 @@ To create a dbt SQL model, click on **Create a new model** and perform the follo
 
 1. Drag an operator from the operator toolbar and drop it onto the canvas.
 2. Click on the operator to open its configuration panel:
-	- **Table**: Select the table and columns you want to use.
+	- **Model**: Select the table and columns you want to use.
 	- **Join**: Define the join conditions and choose columns from both tables.
 	- **Select**: Pick the columns you need from the table.
 	- **Aggregate**: Specify the aggregation functions and the columns they apply to.
