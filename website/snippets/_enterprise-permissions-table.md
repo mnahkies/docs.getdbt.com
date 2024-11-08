@@ -19,11 +19,11 @@ Account roles enable you to manage the dbt Cloud account and manage the account 
 {`
 | Account-level permission| Account Admin | Billing admin |  Manage marketplace apps | Project creator | Security admin | Viewer | 
 |:-----------------------:|:-------------:|:--------------:|:------------------------:|:---------------:|:--------------:|:-------:|
-| Account settings     |     **W**         |       -        |        -                  |        _R_        |       R        |   R    |
+| [Account settings](www.youtube.com)     |     **W**         |       -        |        -                  |        _R_        |       R        |   R    |
 | Audit logs          |     R         |        -       |        -                  |        -        |       R        |   R    |
-| Auth provider           |     W         |       -        |        -                  |        -        |       W        |   R    |
+| [Auth provider](/docs/build/models)           |     W         |       -        |        -                  |        -        |       W        |   R    |
 | Billing                 |     W         |       W       |         -                 |         -       |        -        |   R    |
-| Connections             |     W         |       -        |        -                  |        W        |       -        |   -     |
+| Connections   <br /> test test          |     W         |       -        |        -                  |        W        |       -        |   -     |
 | Groups                  |     W         |       -        |        -                  |        R        |       W        |   R    |
 | Invitations             |     W         |       -        |        -                  |        W        |       W        |   R    |
 | IP restrictions        |     W         |       -        |        -                  |        -        |       W        |   R    |
