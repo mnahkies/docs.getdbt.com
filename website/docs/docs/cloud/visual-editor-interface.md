@@ -25,18 +25,18 @@ This page offers comprehensive definitions and terminology of user interface ele
 The visual editor interface is composed of:
 
 - **Operator toolbar** &mdash; Located at the top of the interface, the toolbar displays all the nodes available. Use the toggle on the left of the toolbar to display or hide it.
-- **Operators** &mdash; perform specific transformations or configurations (such as table, join, aggregate, filter, and so on). Use connectors to link the operators and build a complete data transformation pipeline. 
+- **Operators** &mdash; perform specific transformations or configurations (such as model, join, aggregate, filter, and so on). Use connectors to link the operators and build a complete data transformation pipeline. 
 - **Canvas** &mdash; The main whiteboard space below the node toolbar. The canvas allows you to create or modify models through a sleek drag-and-drop experience.
 - **Configuration panel** &mdash; Each operator has a configuration panel that opens when you click on it. The configuration panel allows you to configure the operator, review the current model, preview changes to the table, view the SQL code for the node, and delete the operator.
 
 ## Operators
 
-The operator toolbar above the canvas contains the different transformation operators available to use. Use each operator to configure or perform specific tasks, like adding filters or joining tables by dragging an operator onto the canvas. You can connect operators using the connector line, which allows you to form a complete dbt model for your data transformation.
+The operator toolbar above the canvas contains the different transformation operators available to use. Use each operator to configure or perform specific tasks, like adding filters or joining models by dragging an operator onto the canvas. You can connect operators using the connector line, which allows you to form a complete dbt model for your data transformation.
 
 <Lightbox src="/img/docs/dbt-cloud/visual-editor/edit-model.jpg" width="90%" title="Use the operator toolbar to perform different transformation operations." />
 
 Here the following operators are available:
-- **Model**: This represents a data model. Use this to select the source table and the columns you want to include. There are no limits to the number of tables you can have in a session.
+- **Model**: This represents a data model. Use this to select the source table and the columns you want to include. There are no limits to the number of models you can have in a session.
 - **Join**: Join two models and configure the join conditions by selecting which columns to include from each table. Requires two inputs. For example, you might want to join both tables using the 'ID' column found in both tables.
 - **Select**: Use this to 'select' specific columns from a table.
 - **Aggregate**: Allows you to perform aggregations like GROUP, SUM, AVG, COUNT, and so on.
@@ -61,7 +61,7 @@ The visual editor has a sleek drag-and-drop canvas interface that allows you to 
 - Version-control your dbt models
 - [Coming soon] Test and document your created models
 
-<Lightbox src="/img/docs/dbt-cloud/visual-editor/operator.jpg" width="90%" title="The operator toolbar allows you to select different nodes to configure or perform specific tasks, like adding filters or joining tables." />
+<Lightbox src="/img/docs/dbt-cloud/visual-editor/operator.jpg" width="90%" title="The operator toolbar allows you to select different nodes to configure or perform specific tasks, like adding filters or joining models." />
 
 ### Connector
 
@@ -73,12 +73,12 @@ Connectors allow you to connect your operators to create dbt models. Once you've
 <Lightbox src="/img/docs/dbt-cloud/visual-editor/connector.jpg" width="100%" title="Click and drag your cursor to connect operators." />
 
 ## Configuration panel
-Each operator has a configuration side panel that opens when you click on it. The configuration panel allows you to configure the operator, review the current table, preview changes to the table, view the SQL code for the operator, and delete the operator.
+Each operator has a configuration side panel that opens when you click on it. The configuration panel allows you to configure the operator, review the current model, preview changes, view the SQL code for the operator, and delete the operator.
 
 The configuration side panel has the following:
 - Configure tab &mdash; This section allows you to configure the operator to your specified requirements, such as using the built-in AI code generator to generate SQL.
-- Input tab &mdash; This section allows you to view the data for the current source table. Not available for table operators.
-- Output tab &mdash; This section allows you to preview the data for the modified source table.
+- Input tab &mdash; This section allows you to view the data for the current source table. Not available for model operators.
+- Output tab &mdash; This section allows you to preview the data for the modified source model.
 - Code &mdash; This section allows you to view the underlying SQL code for the data transformation.
 
 <Lightbox src="/img/docs/dbt-cloud/visual-editor/config-panel.jpg" width="90%" title="A sleek drag-and-drop canvas interface that allows you to create or modify dbt SQL models." />
