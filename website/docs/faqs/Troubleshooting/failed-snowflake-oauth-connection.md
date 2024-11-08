@@ -6,7 +6,7 @@ sidebar_label: 'Receiving `Failed to connect to database` error'
 
 1. If you see this error: 
 
-```
+```shell
 Failed to connect to DB: xxxxxxx.snowflakecomputing.com:443. The role requested in the connection or the default role if none was requested in the connection ('xxxxx') is not listed in the Access Token or was filtered. Please specify another role, or contact your OAuth Authorization server administrator.
 ```
 
