@@ -1,4 +1,13 @@
 import React, { useState } from 'react';
+import Markdown from 'markdown-to-jsx';
+
+const stripMarkdown = (text) => {
+  // Remove link syntax: [text](url) -> text
+  let strippedText = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+  // Remove other Markdown characters like *, _, ~, ` (for bold, italics, etc.)
+  strippedText = strippedText.replace(/[_*`~]/g, '');
+  return strippedText;
+};
 
 const parseMarkdownTable = (markdown) => {
   const rows = markdown.trim().split('\n');
@@ -17,7 +26,6 @@ const parseMarkdownTable = (markdown) => {
     }
   });
 
-  // Get the table data
   const data = rows.slice(2).map(row => row.split('|').map(cell => cell.trim()).filter(Boolean));
 
   return { headers, data, columnAlignments };
@@ -34,8 +42,9 @@ const SortableTable = ({ children }) => {
     setSortConfig({ key: keyIndex, direction: newDirection });
 
     const sortedData = [...data].sort((a, b) => {
-      const aVal = a[keyIndex];
-      const bVal = b[keyIndex];
+      
+      const aVal = stripMarkdown(a[keyIndex]);
+      const bVal = stripMarkdown(b[keyIndex]);
       if (aVal < bVal) return newDirection === 'asc' ? -1 : 1;
       if (aVal > bVal) return newDirection === 'asc' ? 1 : -1;
       return 0;
@@ -92,7 +101,7 @@ const SortableTable = ({ children }) => {
                   padding: '8px' 
                 }}
               >
-                {cell || '\u00A0'}
+                <Markdown>{cell || '\u00A0'}</Markdown>
               </td>
             ))}
           </tr>
