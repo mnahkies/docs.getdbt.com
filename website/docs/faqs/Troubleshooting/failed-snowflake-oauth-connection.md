@@ -15,4 +15,5 @@ Failed to connect to DB: xxxxxxx.snowflakecomputing.com:443. The role requested 
  ```sql
 ALTER INTEGRATION <my_int_name> SET EXTERNAL_OAUTH_SCOPE_MAPPING_ATTRIBUTE = 'scp';
 ```
+
 You can read more about this error in [Snowflake's documentation](https://community.snowflake.com/s/article/external-custom-oauth-error-the-role-requested-in-the-connection-is-not-listed-in-the-access-token).
